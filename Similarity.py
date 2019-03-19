@@ -51,7 +51,7 @@ def TF(dataset):
     term = list()
     dataGejala, datatest = Data(dataset)
 
-    test = datatest[3,0]
+    test = datatest[3,0] #dapat diganti dengan angka sesuai urutan dokumen yang akan ditest
     for doc in test:
         del term[:]
         for i in range(len(dataGejala)):
@@ -100,41 +100,3 @@ def TfIdf(dataset):
     return relate_doc
 
 TfIdf(dataset)
-
-
-#print(databaru)
-#print(len(datapreproses))
-#print(len(dataproses))
-
-
-
-
-
-
-
-    
-
-#print(dataproses)
-
-"""MEMBUAT 3 TASK PREPROCESSING DENGAN 
-1. CASE FOLDING
-2. TOKENIZATION
-3. STEMMING
-"""
-"""
-#STEMMING
-#MEMBUAT STEMMER
-factory = StemmerFactory()
-stemmer = factory.create_stemmer()
-
-#PROSES STEMMING
-stemming_tweet = [stemmer.stem(i) for i in casefolding]
-
-#TOKENIZATION
-token = [i.split() for i in stemming_tweet]
-
-ceck = open('cobao.csv', 'w')
-tulis = csv.writer(ceck)
-tulis.writerow(['pesan'])
-tulis.writerows(token)
-"""
